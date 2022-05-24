@@ -1,0 +1,1 @@
+nodemon server or npm run start

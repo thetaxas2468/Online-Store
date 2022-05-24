@@ -1,0 +1,15 @@
+.items-preview {
+    padding: 10px 16px;
+    margin: 20px 0;
+    border-bottom: 1px solid #000000;
+}
+.items-preview:hover {
+box-shadow: 3px 3px 50px 50px rgba(0, 0, 0, 0.1);
+}
+.items-preview h1 {
+    color: #f1356d;
+    margin-bottom: 8px;
+}
+html{
+    background-color: #856b73;
+}
