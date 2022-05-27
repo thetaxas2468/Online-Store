@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
 const Item = mongoose.Schema({
-
     name: {
         type:String,
     required:true
@@ -13,6 +12,8 @@ const Item = mongoose.Schema({
     QR:{
         type:String,
         require:true,
+        unique:true,
+        index:true
 
     },
     details:{
