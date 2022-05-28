@@ -1,4 +1,4 @@
-const Item=require("../Models/Item")
+const Item=require("../../Models/Item")
 const router = require('express').Router();
 router.get("/add-item", (req,res)=>{
     
@@ -42,8 +42,8 @@ router.get("/delete-item", (req,res)=>{
     
 });
 
-router.get("/",(req,res)=>{
-    Item.find().then((result)=>{
+router.get("/",async (req,res)=>{
+    await Item.find().then((result)=>{
         res.send(result)
     }).catch(err=>console.log(err));
 })

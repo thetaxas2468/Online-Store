@@ -2,15 +2,19 @@
 const express = require("express");
 var cors = require("cors");
 const mongoose=require("mongoose")
+const users=require("./Routes/users")
+const items=require("./Routes/items")
 
 
-
-
-const Routes=require("./Routes")
-// app.get("/",(req,res)=>res.send("hey"))
 const app=express();
 app.use(cors());
-app.use("/items",Routes);
+
+
+app.use("/items",items);
+app.use("/users",users);
+
+
+
 app.use((req,res)=>{
     res.status(404)
     res.send("404 page not found")

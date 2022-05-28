@@ -17,7 +17,6 @@ const Home =()=>{
             axios.get("http://localhost:3002/items").then((result)=>{
                 setItems(result.data);
                 setIsPending(false);
-                console.log(Items)
             }).catch((err)=>{
                 console.log(err)
             })

@@ -5,3 +5,20 @@
      background-color: aqua;
      color: blue;
  }
+.signinsignout{
+     font-size: 20px;
+     color: red !important;
+     width: 25%;
+     background-color: gray !important;
+     margin-bottom: 5px;
+     box-shadow: 2px 2px 10px gray;
+}
+.signinsignout:hover{
+    font-size: 20px;
+    color: black !important;
+    width: 25%;
+    background-color: gray !important;
+    margin-bottom: 5px;
+    box-shadow: 2px 2px 20px gray;
+    transform: rotate(180deg);
+}
