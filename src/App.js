@@ -8,6 +8,7 @@ import Update from "./pages/Admin/Update/Update.jsx"
 import Signin from "./pages/Signin/Signin.jsx"
 import Signup from "./pages/Signup/Signup.jsx"
 import NotFound from "./pages/NotFound/NotFound.jsx"
+import Loggedin from "./pages/Home/Loggedin"
 function App() {
   return (
     <Router>
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/delete" element={<Delete/>}></Route>
           <Route exact path="/Signin" element={<Signin/>}></Route>
           <Route exact path="/Signup" element={<Signup/>}></Route>
+          <Route exact path="/Loggedin" element={<Loggedin/>}></Route>
           <Route path='*' element={<NotFound/>}></Route>
         </Routes>
       </div>

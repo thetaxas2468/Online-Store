@@ -42,8 +42,8 @@ router.get("/delete-item", (req,res)=>{
     
 });
 
-router.get("/",async (req,res)=>{
-    await Item.find().then((result)=>{
+router.get("/",(req,res)=>{
+    Item.find().then((result)=>{
         res.send(result)
     }).catch(err=>console.log(err));
 })

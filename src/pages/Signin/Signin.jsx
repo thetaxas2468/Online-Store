@@ -3,20 +3,25 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import "./Signin.css";
 import {Link} from "react-router-dom";
-import axios from "axios";
+import $ from "jquery";
 
-export default function Login() {
+export default function Login({loggedin}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   function validateForm() {
+      /* eslint-disable no-useless-escape */
     const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     return email.length > 0 && password.length > 6 && regex.test(email);
   }
 
 
-  const btnClicked=()=>{
-    axios.post("http://localhost:3002/Signin")
+  const btnClicked=(e)=>{
+      const request={email:email,password:password}
+    $.post("http://localhost:3002/users/signin",request).then((respose)=>{
+        window.location.href="/Loggedin";
+    }).catch((error)=>{
+        alert("Your password is not correct!")
+    })
   }
   return (
     <div className="Login container">
@@ -38,7 +43,7 @@ export default function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
-        <Button className="mt-5" block="true" size="lg" type="submit" disabled={!validateForm()} onClick={()=>btnClicked()}>
+        <Button className="mt-5" block="true" size="lg" type="button" disabled={!validateForm()} onClick={()=>btnClicked()}>
           Login
         </Button>
         <Link to="/" className="m-5 d-block">Home</Link>
