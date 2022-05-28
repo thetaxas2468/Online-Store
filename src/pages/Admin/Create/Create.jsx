@@ -4,7 +4,6 @@ import ContactUs from "../../../components/ContactUs/ContactUs";
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Navbar from "../../../components/Navbar/Navbar";
 import OpenClose from "../../../components/OpenClose/OpenClose";
 function Create(){
     const [name,setName]=useState("");

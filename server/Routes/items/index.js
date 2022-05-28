@@ -1,4 +1,4 @@
-const Item=require("../Models/Item")
+const Item=require("../../Models/Item")
 const router = require('express').Router();
 router.get("/add-item", (req,res)=>{
     

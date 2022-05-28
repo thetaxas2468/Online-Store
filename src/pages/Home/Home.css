@@ -1,7 +1,7 @@
 .items-preview {
     padding: 10px 16px;
     margin: 20px 0;
-    border-bottom: 1px solid #000000;
+    border: 2px dotted black;
 }
 .items-preview:hover {
 box-shadow: 3px 3px 50px 50px rgba(0, 0, 0, 0.1);
@@ -12,4 +12,18 @@ box-shadow: 3px 3px 50px 50px rgba(0, 0, 0, 0.1);
 }
 html{
     background-color: #856b73;
+}
+
+div.items-preview h1{
+    color: blue;
+    border: 1px solid green;
+    display: inline-block;
+    width: 25%;
+    border-radius: 25%;
+    box-shadow: 2px 2px 20px black;
+    text-shadow: 1px 1px 20px black;
+}
+.items-list{
+    border: 2px solid red;
+    box-shadow: 2px 2px 5px gray;
 }

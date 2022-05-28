@@ -4,13 +4,16 @@ import Navbar from "../../components/Navbar/Navbar";
 import Itemlist from "../../helpers/itemList"
 import Openclosed from "../../components/OpenClose/OpenClose"
 import Contactus from "../../components/ContactUs/ContactUs"
+import Button from "react-bootstrap/Button";
 import "./Home.css"
-import {Link} from "react-router-dom";
+
 
 const Home =()=>{
     const [IsPending,setIsPending]=useState(true);
     const [Items,setItems]=useState([]);
-
+    const logout = ()=>{
+        window.location.href="/";
+    }
 
     useEffect(()=>{
         setTimeout(()=>{
@@ -26,11 +29,8 @@ const Home =()=>{
         <div className="home">
             <Openclosed/>
             
-                <div className="container d-flex justify-content-between">
-                <Link to="/Signin" className="btn btn-primary active signinsignout">Sign In</Link>
-                <Link to="/Signup"  className="btn btn-primary active signinsignout">Sign Up</Link>
-            </div>
-
+            <div className="mt-5 mb-5"><h1>Welcome to the store client x</h1>
+            <Button onClick={()=>logout()}>Log out</Button></div>
             <Navbar/>
             {IsPending && <div><h1>Loading...</h1></div>}
             <Itemlist list={Items}/>
