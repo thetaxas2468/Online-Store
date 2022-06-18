@@ -43,6 +43,7 @@ router.get("/delete-item", (req,res)=>{
 });
 
 router.get("/",(req,res)=>{
+    console.log(req.session);
     Item.find().then((result)=>{
         res.send(result)
     }).catch(err=>console.log(err));

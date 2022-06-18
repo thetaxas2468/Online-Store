@@ -22,6 +22,7 @@ const Home =()=>{
             })
         },1000)
     },[]);
+    console.log("what")
     return (
         <div className="home">
             <Openclosed/>

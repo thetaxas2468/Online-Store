@@ -16,7 +16,8 @@ router.post("/signup",(req,res)=>{
 });
 
 router.post("/signin",(req,res)=>{
-    User.findOne({"email":"test@hotmail.com"}).then(result=>{
+    const { email , password } =req.body;
+    User.findOne({"email":email}).then(result=>{
         var bytes = CryptoJS.AES.decrypt(result.password, key);
         var decryptedData = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
         if(decryptedData===req.body.password){
