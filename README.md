@@ -1,15 +1,7 @@
-# Store that has items with name,value,qrcode,description
+Market: Website is about a store that has items for sale in it and each item has QRCODE,Name,Value,Description and the store has clients and admins that add items in the store and each client has his own user to check if the store is open closed and what items in it and their descriptions.
+Frontend:React,HTML,CSS,Jquery,Bootstrap,Javascript,Axios …..
+Backend:NodeJS,Express,BodyParser,MongoDB(Mongoose),cors…
 
-# main page is for admins and clients
-
-# clients see only the main page that gets updated only by admins that have access to the private URL and admin password
-
-# client Only can read from database
-
-# admin can read,write,update,delete
-
-
-# MERN used with few more libraries like axios,bootstrap .....
 
 # Getting Started with Create React App
 
