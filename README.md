@@ -1,6 +1,6 @@
-Market: Website is about a store that has items for sale in it and each item has QRCODE,Name,Value,Description and the store has clients and admins that add items in the store and each client has his own user to check if the store is open closed and what items in it and their descriptions.
-Frontend:React,HTML,CSS,Jquery,Bootstrap,Javascript,Axios …..
-Backend:NodeJS,Express,BodyParser,MongoDB(Mongoose),cors…
+Online Store: Web application that allows registering two types of users, the first user type is “Admin” and the second is “Store customer”. The admin user can create a store, update its status (Open/Closed) and adds/update/delete items from the store.
+Frontend: ReactJS, HTML, CSS, JQuery, Bootstrap, Javascript and Axios.
+Backend: NodeJS, Express, BodyParser, MongoDB Database and Cors.
 
 
 # Getting Started with Create React App
